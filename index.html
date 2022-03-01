@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- copy section  -->
+    <input type="text" id="copyText">
+    <button id="copyBTN">Copy</button>
+
+    <!-- Cut section  -->
+    <input type="text" id="cutText">
+    <button id="cutBTN">Cut</button>
+
+    <script>
+        //  copy section 
+        var copyText = document.getElementById('copyText');
+        var copyBTN = document.getElementById('copyBTN');
+
+        copyBTN.addEventListener('click',function(){
+            navigator.clipboard.writeText(copyText.value)
+            alert('Copy Successfully!');
+        });
+
+        // cut section 
+        var cutText = document.getElementById('cutText');
+        var cutBTN = document.getElementById('cutBTN');
+
+        cutBTN.addEventListener('click',function(){
+            navigator.clipboard.writeText(cutText.value);
+            cutText.value = "";
+        })
+        
+    </script>
+</body>
+</html>
