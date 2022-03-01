@@ -8,13 +8,16 @@
 </head>
 <body>
     <!-- copy section  -->
-    <input type="text" id="copyText">
+    <input type="text" id="copyText" value="">
     <button id="copyBTN">Copy</button>
 
     <!-- Cut section  -->
-    <input type="text" id="cutText">
+    <input type="text" id="cutText" value="">
     <button id="cutBTN">Cut</button>
 
+      <!-- Paste section  -->
+      <input type="text" id="pasteText" value="">
+      <button id="pasteBTN">Paste</button>
     <script>
         //  copy section 
         var copyText = document.getElementById('copyText');
@@ -33,6 +36,11 @@
             navigator.clipboard.writeText(cutText.value);
             cutText.value = "";
         })
+        
+        // paste section 
+        var pasteText = document.getElementById('pasteText');
+        var pasteBTN = document.getElementById('pasteBTN');
+
         
     </script>
 </body>
